@@ -1,0 +1,13 @@
+name: Deploy-DGS
+
+on:
+  workflow_caller:
+    inputs:
+      projectPackage:
+        required: true
+        type: string
+        
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    runs: echo ${{ inputs.projectPackage }}
