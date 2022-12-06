@@ -1,0 +1,27 @@
+name: CI-DGS
+
+on:
+  # push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/builddgs-yml
+    with:
+      project: "My Dave Project"
+      
+  test:
+    uses: ./.github/workflows/testdgs-yml
+    with:
+      project: "My Dave Project"
+      
+  deployDev:
+    needs:
+    - build
+    - test
+    uses: ./.github/workflows/deploydgs-yml
+    with:
+      projectPackage: "MyDaveProject.zip"
+      environment: dev
+      cloud: AWS
+    
