@@ -16,6 +16,9 @@ jobs:
       project: "My Dave Project"
 
   deploy:
+    needs:
+      - build
+      - test
     uses: ./.github/workflows/deploydgs.yml
     with:
       projectPackage: "MyDaveProject.zip"
