@@ -14,3 +14,8 @@ jobs:
     uses: ./.github/workflows/testdgs.yml
     with:
       project: "My Dave Project"
+
+  deploy:
+    uses: ./.github/workflows/deploydgs.yml
+    with:
+      projectPackage: "MyDaveProject.zip"

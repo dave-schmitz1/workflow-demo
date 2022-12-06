@@ -11,4 +11,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ inputs.projectPackage }}
+      - run: echo "Deploying ${{ inputs.projectPackage }}"
