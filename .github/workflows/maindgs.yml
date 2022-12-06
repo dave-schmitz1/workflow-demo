@@ -9,7 +9,7 @@ jobs:
     uses: ./.github/workflows/builddgs.yml
     with:
       project: "My Dave Project"
-      
+
   test:
     uses: ./.github/workflows/testdgs.yml
     with:
