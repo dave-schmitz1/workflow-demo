@@ -6,8 +6,9 @@ on:
       projectPackage:
         required: true
         type: string
-        
+
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    runs: echo ${{ inputs.projectPackage }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.projectPackage }}
