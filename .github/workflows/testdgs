@@ -1,0 +1,13 @@
+name: Test-DGS
+
+on:
+  workflow_caller:
+    inputs:
+      project:
+        required: true
+        type: string
+        
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    runs: echo ${{ input.project }}
