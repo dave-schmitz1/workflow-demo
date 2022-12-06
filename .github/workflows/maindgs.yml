@@ -6,12 +6,12 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/builddgs-yml
+    uses: ./.github/workflows/builddgs.yml
     with:
       project: "My Dave Project"
       
   test:
-    uses: ./.github/workflows/testdgs-yml
+    uses: ./.github/workflows/testdgs.yml
     with:
       project: "My Dave Project"
       
@@ -19,7 +19,7 @@ jobs:
     needs:
     - build
     - test
-    uses: ./.github/workflows/deploydgs-yml
+    uses: ./.github/workflows/deploydgs.yml
     with:
       projectPackage: "MyDaveProject.zip"
       environment: dev
