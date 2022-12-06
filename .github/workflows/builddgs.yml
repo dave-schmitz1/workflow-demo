@@ -1,7 +1,7 @@
 name: Build-DGS
 
 on:
-  workflow_caller:
+  workflow_call:
     inputs:
       project:
         required: true

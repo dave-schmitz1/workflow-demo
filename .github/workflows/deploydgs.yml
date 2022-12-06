@@ -1,7 +1,7 @@
 name: Deploy-DGS
 
 on:
-  workflow_caller:
+  workflow_call:
     inputs:
       projectPackage:
         required: true
